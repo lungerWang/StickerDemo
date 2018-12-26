@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.lunger.stickerdemo">
 
     <application
@@ -18,6 +19,25 @@
             </intent-filter>
         </activity>
 
+        <!--这里有改动-->
+        <activity
+            android:name=".StickerPackDetailsActivity"
+            tools:ignore="UnusedAttribute">
+           <!-- android:parentActivityName=".StickerPackListActivity"-->
+          <!--  <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.samplestickerapp.StickerPackListActivity" />-->
+        </activity>
+
+        <activity
+            android:name=".StickerPackInfoActivity"
+            android:label="@string/title_activity_sticker_pack_info"
+            android:parentActivityName=".StickerPackDetailsActivity"
+            tools:ignore="UnusedAttribute">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StickerPackDetailsActivity" />
+        </activity>
 
         <provider
             android:name=".StickerContentProvider"
@@ -25,6 +45,8 @@
             android:enabled="true"
             android:exported="true"
             android:readPermission="com.whatsapp.sticker.READ" />
+
+
     </application>
 
 </manifest>

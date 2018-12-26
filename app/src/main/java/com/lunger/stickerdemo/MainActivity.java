@@ -32,12 +32,12 @@ public class MainActivity extends AppCompatActivity {
         progressBar.setVisibility(View.GONE);
 
         //进入帖图详情页
-//        final Intent intent = new Intent(this, StickerPackDetailsActivity.class);
-//        intent.putExtra(StickerPackDetailsActivity.EXTRA_SHOW_UP_BUTTON, false);
-//        intent.putExtra(StickerPackDetailsActivity.EXTRA_STICKER_PACK_DATA, stickerPackList.get(0));
-//        startActivity(intent);
-//        finish();
-//        overridePendingTransition(0, 0);
+        final Intent intent = new Intent(this, StickerPackDetailsActivity.class);
+        intent.putExtra(StickerPackDetailsActivity.EXTRA_SHOW_UP_BUTTON, false);
+        intent.putExtra(StickerPackDetailsActivity.EXTRA_STICKER_PACK_DATA, stickerPackList.get(0));
+        startActivity(intent);
+        finish();
+        overridePendingTransition(0, 0);
     }
 
     private void showErrorMessage(String errorMessage) {
